@@ -4,6 +4,7 @@ import './CartItems.css';
 
 function CartItems( { items, setcartItems }) {
   const changeItemQuantity = (e, index) => {
+    //duplicates the items and stores in newitems
     const newitems = [...items];
     newitems[index].quantity = Number(e.target.value);
     setcartItems(newitems);
