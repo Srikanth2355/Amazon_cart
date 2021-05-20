@@ -1,10 +1,17 @@
 import React from 'react';
 import './CartTotal.css';
 
-function CartTotal() {
+function CartTotal({ items }) {
+    const getTotalPrice = () => {
+        let total = 0;
+        items.forEach((item)=> {
+            total += (item.price * item.quantity);
+        })
+        return total;
+    }
     return (
         <div className="cartTotal">
-            <h3>Subtotal(5 items):<span className="cartTotal-price">$2,178.38</span></h3>
+            <h3>Subtotal({items.length} items):<span className="cartTotal-price">${getTotalPrice()}</span></h3>
             <button>Proceed to Checkout</button>
         </div>
     )
