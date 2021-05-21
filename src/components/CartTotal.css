@@ -3,6 +3,7 @@
     background-color: white;
     padding: 20px;
     text-align: left;
+    min-width: 300px;
   }
   .cartTotal button {
     background: #f0c14b;
